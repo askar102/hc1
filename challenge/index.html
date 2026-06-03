@@ -73,5 +73,32 @@
                 <a class="captcha-logo"></a>
             </div>
         </div>
+
+        <script>
+            const menuInfoButton = document.getElementsByClassName("menu-info");
+
+            const menuInfoButtonOn = document.getElementsByClassName("info-on");
+            const menuInfoButtonOff = document.getElementsByClassName("info-off");
+
+            console.log(menuInfoButton);
+            console.log(menuInfoButtonOn);
+            console.log(menuInfoButtonOff);
+
+            let menuInfoIsEnabled = false;
+
+            menuInfoButton[0].addEventListener("click", () => {
+                menuInfoIsEnabled = !menuInfoIsEnabled;
+
+                if (menuInfoIsEnabled) {
+                    menuInfoButtonOff[0].style.opacity = 0;
+                    menuInfoButtonOn[0].style.opacity = 1;
+                }
+                else {
+                    menuInfoButtonOff[0].style.opacity = 1;
+                    menuInfoButtonOn[0].style.opacity = 0;
+                }
+            });
+
+        </script>
     </body>
 </html>
