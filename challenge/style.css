@@ -1,123 +1,257 @@
-.body {
-    width: 520px;
-    height: 570px;
+body {
+    width: 400px;
+    height: 600px;
+
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,"Helvetica Neue",Arial,sans-serif;
 }
 
 /* MAIN WRAPPER */
 .interface-wrapper {
-    width: 500px;
-    height: 550px;
+    width: 380px;
+    height: 580px;
     position: relative;
     margin: 10px;
-
-    background: #be0000;
 }
 
 /* CHALLENGE */
 .challenge-container {
-    width: 500px;
-    height: 470px;
+    width: 380px;
+    height: 500px;
     position: relative;
     z-index: 0;
     margin-bottom: 10px;
     right: auto;
-
-    background: #87fd00;
 }
 
 .challenge {
-    width: 500px;
-    height: 470px;
-    border-radius: 4px;
-    overflow: hidden;
+    width: 380px;
+    height: 500px;
+}
 
-    background-color: blue;
+.challenge-view {
+    width: 380px;
+    height: 500px;
 }
 
 .challenge-header {
-    width: 500px;
+    width: 380px;
     height: 110px;
     position: relative;
-    display: block;
+    display: block; 
+  
     margin-bottom: 10px;
-
-    background-color: chocolate;
 }
 
 .challenge-prompt {
+    width: 380px;
+    height: 110px;
+    position: absolute;
+    display: table;
 
+    text-align: left;
+    top: 0px;
+    z-index: 0;
 }
 
 .prompt-padding {
+    width: 360px;
+    height: 90px;
+    position: absolute;
 
+    top: 10px;
+    left: 10px;
 }
 
 .prompt-question {
+    width: 250px;
+    position: absolute;
+    display: table-cell;
 
+    margin: 0px;
+    z-index: 5;
+
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    line-height: normal;
+    font-weight: normal;
+    text-align: left;
+
+    direction: ltr;
+    transition: opacity 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+    vertical-align: top;
 }
 
 .prompt-bg {
+    width: 378px;
+    height: 106px;
+    position: absolute;
+    
+    opacity: 1;
+    top: 0px;
+    left: 0px;
 
+    z-index: -1;
+    background-color: rgb(0, 131, 143);
+
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: rgb(0, 131, 143);
+    border-style: solid;
 }
 
+/* TODO: Make it working */
 .examples {
-    
+    width: 380px;
+    height: 110px;
+    position: absolute;
+    display: block;
+     
+    top: 0px;
+    right: 0px;
 }
 
 .task-grid {
-
+    width: 380px;
+    height: 380px;
+    position: relative;
+    display: inline-block;
 }
 
 /* CHALLENGE PANEL */
 .interface-challenge {
-    width: 500px;
+    width: 380px;
     height: 70px;
     position: absolute;
+
     direction: ltr;
     text-align: left;
+  
     left: 0px;
     bottom: 0px;
-
-    background-color: darkblue;
 }
 
 .display-error {
+    height: 16px;
+    width: 90%;
+    position: absolute;
+    display: table;
 
+    opacity: 0; /* Default value */
+    
+    font-size: 12px;
+    text-align: right;
+    line-height: 11px;
+    color: rgb(191, 23, 34);
+ 
+    top: 0px;
+    right: 0px;
+    left: auto;
 }
 
 .challenge-breadcrumbs {
+    width: 500px;
+    height: 8px;
+    position: absolute;
 
+    top: 4px;
 }
 
 .button-submit {
+    height: 35px;
+    min-width: 70px;
+    position: absolute;
 
+    z-index: 100;
+    padding: 0px 5px;
+
+    cursor: pointer;
+    background-color: rgb(85, 85, 85);
+
+    border-radius: 4px;
+    border: 2px solid rgb(255, 255, 255);
+  
+    bottom: 0px;
+    right: 0px;
+    left: initial;
+
+    outline: none;
 }
 
 /* USER PANEL */
 .interface-user {
-    width: 500px;
-    height: 70px;
-    position: absolute;
     direction: ltr;
-    text-align: left;
-    left: 0px;
-    bottom: 0px;
-
-    background-color: deeppink;
+  text-align: left;
+  width: 380px;
+  height: 70px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
 }
 
 .language-selector {
+    position: absolute;
+    display: inline-block;
 
+    top: 0px;
+    left: 0px;
+
+    z-index: 100;
 }
 
 .menu-info {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    position: absolute;
 
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+
+    border-radius: 4px;
+    border: medium;
+
+    bottom: 2.5px;
+    z-index: 100;
+    left: 0px;
+
+    outline: none;
 }
 
 .button-refresh {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    
+    background-color: rgb(255, 255, 255);
+    outline: rgb(0, 131, 143);
+    border-radius: 4px;
+    
+    top: auto;
+    bottom: 2.5px;
+    left: 45px;
 
+    z-index: 100;
 }
 
 .captcha-logo {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    display: block;
+    
+    cursor: pointer;
+    border-radius: 4px;
 
+    margin-left: -16px;
+    left: 50%;
+    top: auto;
+    bottom: 4px;
+}
+
+/* COMMON */
+.error-text {
+    display: table-cell;
+    vertical-align: middle;
 }
