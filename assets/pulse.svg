@@ -1,0 +1,39 @@
+<svg viewBox="0 0 44 44" width="30" height="30">
+    <!--FIRST -->
+    <circle cx="22" cy="22" r="1"
+        stroke="#FF7880"
+        stroke-width="2"
+        fill="none">
+                  
+    <animate attributeName="r"
+        from="1" to="20"
+        dur="1.8s"
+        repeatCount="indefinite" />
+                  
+     <animate attributeName="stroke-opacity"
+        from="1" to="0"
+        dur="1.8s"
+        repeatCount="indefinite" />
+
+    </circle>
+
+    <!--SECOND-->       
+    <circle cx="22" cy="22" r="1"
+        stroke="#FF7880"
+        stroke-width="2"
+        fill="none">
+                  
+    <animate attributeName="r"
+        from="1" to="20"
+        dur="1.8s"
+        begin="-0.9s"
+        repeatCount="indefinite" />
+                  
+    <animate attributeName="stroke-opacity"
+        from="1" to="0"
+        dur="1.8s"
+        begin="-0.9s"
+        repeatCount="indefinite" />
+    
+    </circle> 
+</svg>
