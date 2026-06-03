@@ -1,0 +1,77 @@
+.body {
+    width: 520px;
+    height: 570px;
+}
+
+.interface-wrapper {
+    width: 500px;
+    height: 550px;
+    position: relative;
+    margin: 10px;
+
+    background: #be0000;
+}
+
+.challenge-container {
+    width: 500px;
+    height: 470px;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 10px;
+    right: auto;
+
+    background: #87fd00;
+}
+
+.challenge {
+    width: 500px;
+    height: 470px;
+    border-radius: 4px;
+    overflow: hidden;
+
+    background-color: blue;
+}
+
+.challenge-header {
+    width: 500px;
+    height: 110px;
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+
+    background-color: chocolate;
+}
+
+.challenge-game {
+    width: 500px;
+    height: 470px;
+    position: absolute;
+    top: 0px;
+    cursor: default;
+    z-index: 10;
+}
+
+.interface-challenge {
+    width: 500px;
+    height: 70px;
+    position: absolute;
+    direction: ltr;
+    text-align: left;
+    left: 0px;
+    bottom: 0px;
+
+    background-color: darkblue;
+}
+
+
+.interface-user {
+    width: 500px;
+    height: 70px;
+    position: absolute;
+    direction: ltr;
+    text-align: left;
+    left: 0px;
+    bottom: 0px;
+
+    background-color: deeppink;
+}
