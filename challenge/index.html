@@ -1,5 +1,6 @@
 <!-- html-validate-disable no-trailing-whitespace -->
 <!-- html-validate-disable no-implicit-button-type-->
+<!-- html-validate-disable no-inline-style-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,13 +45,30 @@
             <div class="interface-challenge">
                 <div class="display-error"></div>
                 <div class="challenge-breadcrumbs"></div>
-                <div class="button-submit button"></div>
+                <div class="button-submit button">
+                    <div class="text">Пропустить</div>
+                </div>
             </div>
             
             <!--Lang, menu-info, refresh button, logo, -->
             <div class="interface-user">
                 <div class="language-selector"></div>
-                <div class="menu-info"></div>
+                <div class="menu-info">
+                    <div class="info-off">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+                            <circle cx="12.5" cy="21.6" r="2" fill="#787878" style="fill: rgb(85, 85, 85);"></circle>
+                            <circle cx="12.5" cy="12.5" r="2" fill="#787878" style="fill: rgb(85, 85, 85);"></circle>
+                            <circle cx="12.5" cy="3.40002" r="2" fill="#787878" style="fill: rgb(85, 85, 85);"></circle>
+                        </svg>
+                    </div>
+                    <div class="info-on">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+                            <circle cx="12.5" cy="21.6" r="2" fill="#787878" style="fill: rgb(85, 85, 85);"></circle>
+                            <circle cx="12.5" cy="12.5" r="2" fill="#787878" style="fill: rgb(85, 85, 85);"></circle>
+                            <circle cx="12.5" cy="3.40002" r="2" fill="#787878" style="fill: rgb(85, 85, 85);"></circle>
+                        </svg>
+                    </div>
+                </div>
                 <div class="button-refresh button"></div>
                 <a class="captcha-logo"></a>
             </div>
