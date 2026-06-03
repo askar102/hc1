@@ -3,6 +3,7 @@
     height: 570px;
 }
 
+/* MAIN WRAPPER */
 .interface-wrapper {
     width: 500px;
     height: 550px;
@@ -12,6 +13,7 @@
     background: #be0000;
 }
 
+/* CHALLENGE */
 .challenge-container {
     width: 500px;
     height: 470px;
@@ -42,15 +44,31 @@
     background-color: chocolate;
 }
 
-.challenge-game {
-    width: 500px;
-    height: 470px;
-    position: absolute;
-    top: 0px;
-    cursor: default;
-    z-index: 10;
+.challenge-prompt {
+
 }
 
+.prompt-padding {
+
+}
+
+.prompt-question {
+
+}
+
+.prompt-bg {
+
+}
+
+.examples {
+    
+}
+
+.task-grid {
+
+}
+
+/* CHALLENGE PANEL */
 .interface-challenge {
     width: 500px;
     height: 70px;
@@ -63,7 +81,19 @@
     background-color: darkblue;
 }
 
+.display-error {
 
+}
+
+.challenge-breadcrumbs {
+
+}
+
+.button-submit {
+
+}
+
+/* USER PANEL */
 .interface-user {
     width: 500px;
     height: 70px;
@@ -74,4 +104,20 @@
     bottom: 0px;
 
     background-color: deeppink;
+}
+
+.language-selector {
+
+}
+
+.menu-info {
+
+}
+
+.button-refresh {
+
+}
+
+.captcha-logo {
+
 }
