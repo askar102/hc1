@@ -70,7 +70,29 @@
                     </div>
                 </div>
 
-                <div id="menu" tabindex="-1" aria-expanded="false" aria-labelledby="menu-info" aria-hidden="true"></div>
+                <div id="menu" tabindex="-1" aria-expanded="false" aria-labelledby="menu-info" aria-hidden="true" role="menu">
+                    <div class="scroll-container">
+                        <div class="menu-item" tabindex="-1" role="menuitem">
+                            <span>Pizda</span>
+                            <div style="position: absolute; height: 1px; bottom: -4px; left: 10px; right: 10px; background: rgb(245, 245, 245); display: block;"></div>
+                        </div>
+
+                        <div class="menu-item" tabindex="-1" role="menuitem">
+                            <span>Pizda</span>
+                            <div style="position: absolute; height: 1px; bottom: -4px; left: 10px; right: 10px; background: rgb(245, 245, 245); display: block;"></div>
+                        </div>
+
+                        <div class="menu-item" tabindex="-1" role="menuitem">
+                            <span>Pizda</span>
+                            <div style="position: absolute; height: 1px; bottom: -4px; left: 10px; right: 10px; background: rgb(245, 245, 245); display: block;"></div>
+                        </div>
+
+                        <div class="menu-item" tabindex="-1" role="menuitem">
+                            <span>Pizda</span>
+                            <div style="position: absolute; height: 1px; bottom: -4px; left: 10px; right: 10px; background: rgb(245, 245, 245); display: block;"></div>
+                        </div>
+                    </div>
+                </div>
                 <div class="button-refresh button"></div>
                 <a class="captcha-logo"></a>
             </div>
@@ -82,9 +104,12 @@
             const menuInfoButtonOn = document.getElementsByClassName("info-on")[0];
             const menuInfoButtonOff = document.getElementsByClassName("info-off")[0];
 
+            const scrollMenu = document.getElementById("menu");
+
             console.log(menuInfoButton);
             console.log(menuInfoButtonOn);
             console.log(menuInfoButtonOff);
+            console.log(menu)
 
             let menuInfoIsEnabled = false;
 
@@ -94,12 +119,25 @@
                 if (menuInfoIsEnabled) {
                     menuInfoButton.style['background-color'] = 'rgb(245, 245, 245)';
 
+                    menu.setAttribute('tabindex', '0');
+                    menu.setAttribute('aria-expanded', 'true');
+                    menu.setAttribute('aria-hidden', 'false');
+                    
+                    menu.style['display'] = 'block'
+
+
+
                     menuInfoButtonOff.style.opacity = 0;
                     menuInfoButtonOn.style.opacity = 1;
                 }
                 else {
                     menuInfoButton.style['background-color'] = 'rgb(255, 255, 255)';
+    
+                    menu.setAttribute('tabindex', '-1');
+                    menu.setAttribute('aria-expanded', 'false');
+                    menu.setAttribute('aria-hidden', 'true');
 
+                    menu.style['display'] = 'none'
 
                     menuInfoButtonOff.style.opacity = 1;
                     menuInfoButtonOn.style.opacity = 0;

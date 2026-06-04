@@ -237,6 +237,44 @@ body {
     opacity: 1;
 }
 
+#menu {
+    height: 184px;
+    width: 250px;
+    position: absolute;
+    display: none; /* DEFAULT */
+
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 4px;
+    border-width: 1px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: rgb(110, 130, 158);
+    overflow: hidden;
+
+    bottom: 45px;
+    left: 0px;
+
+    z-index: 100;
+    
+}
+
+.menu-item {
+    height: 40px;
+    position: relative;
+    
+    cursor: pointer;
+
+    color: rgb(85, 85, 85);
+    font-size: 14px;
+    font-weight: 400;
+
+    border-width: 3px;
+    border-style: solid;
+    border-color: transparent;
+
+    background: transparent;
+}
+
 .button-refresh {
     width: 35px;
     height: 35px;
@@ -292,4 +330,15 @@ body {
     text-align: center;
 
     z-index: 5;
+}
+
+.scroll-container {
+    width: 100%;
+    position: absolute;
+
+    line-height: 40px;
+    white-space: nowrap;
+    text-align: center;
+    
+    overflow-y: hidden;
 }
