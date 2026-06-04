@@ -53,7 +53,7 @@
             <!--Lang, menu-info, refresh button, logo, -->
             <div class="interface-user">
                 <div class="language-selector"></div>
-                <div class="menu-info">
+                <div class="menu-info" aria-expanded="false" aria-controls="menu">
                     <div class="info-off">
                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
                             <circle cx="12.5" cy="21.6" r="2" fill="#787878" style="fill: rgb(85, 85, 85);"></circle>
@@ -69,16 +69,18 @@
                         </svg>
                     </div>
                 </div>
+
+                <div id="menu" tabindex="-1" aria-expanded="false" aria-labelledby="menu-info" aria-hidden="true"></div>
                 <div class="button-refresh button"></div>
                 <a class="captcha-logo"></a>
             </div>
         </div>
 
         <script>
-            const menuInfoButton = document.getElementsByClassName("menu-info");
+            const menuInfoButton = document.getElementsByClassName("menu-info")[0];
 
-            const menuInfoButtonOn = document.getElementsByClassName("info-on");
-            const menuInfoButtonOff = document.getElementsByClassName("info-off");
+            const menuInfoButtonOn = document.getElementsByClassName("info-on")[0];
+            const menuInfoButtonOff = document.getElementsByClassName("info-off")[0];
 
             console.log(menuInfoButton);
             console.log(menuInfoButtonOn);
@@ -86,16 +88,21 @@
 
             let menuInfoIsEnabled = false;
 
-            menuInfoButton[0].addEventListener("click", () => {
+            menuInfoButton.addEventListener("click", () => {
                 menuInfoIsEnabled = !menuInfoIsEnabled;
 
                 if (menuInfoIsEnabled) {
-                    menuInfoButtonOff[0].style.opacity = 0;
-                    menuInfoButtonOn[0].style.opacity = 1;
+                    menuInfoButton.style['background-color'] = 'rgb(245, 245, 245)';
+
+                    menuInfoButtonOff.style.opacity = 0;
+                    menuInfoButtonOn.style.opacity = 1;
                 }
                 else {
-                    menuInfoButtonOff[0].style.opacity = 1;
-                    menuInfoButtonOn[0].style.opacity = 0;
+                    menuInfoButton.style['background-color'] = 'rgb(255, 255, 255)';
+
+
+                    menuInfoButtonOff.style.opacity = 1;
+                    menuInfoButtonOn.style.opacity = 0;
                 }
             });
 
