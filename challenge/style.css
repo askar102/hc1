@@ -110,12 +110,131 @@ body {
     right: 0px;
 }
 
+/* TASK CONTAINER */
 .task-grid {
     width: 380px;
     height: 380px;
     position: relative;
-    display: inline-block;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+ 
+    row-gap: 5px;
+    align-content: start;   
 }
+
+.task {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    box-sizing: border-box;
+    outline: none;
+    border: medium;
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.task-image {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+
+    transition: none;
+}
+
+.wrapper {
+    width: 120px;
+    height: 120px;
+    position: relative;
+
+    overflow: hidden;
+    border-radius: 2px;
+    transition: 0.1s cubic-bezier(0.05, 0.55, 0.5, 0.99);
+  
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+    background-color: rgb(245, 245, 245);
+}
+
+.loading-indicator {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+
+    opacity: 0;
+  
+    top: 50%;
+    left: 50%;
+    margin-top: -18px;
+    margin-left: -18px;
+    
+    z-index: 1;
+}
+
+.task-border {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+    left: 0px;
+}
+
+.border {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+
+    opacity: 0;
+
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    border-radius: 2px;
+
+    z-index: 5;
+}
+
+.icon {
+    width: 36px;
+    height: 36px;
+}
+
+.image {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    
+    transition: none;
+    /* background:  50% 50% / 120px 120px no-repeat; */
+
+    top: 50%;
+    left: 50%;
+    margin-left: -60px;
+    margin-top: -60px;
+
+    z-index: 5;
+}
+
+.badge {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+
+    opacity: 0;
+
+    transition: none;
+    border-radius: 50%;
+  
+    top: 5px;
+    right: 5px;
+
+    z-index: 10;
+}
+
 
 /* CHALLENGE PANEL */
 .interface-challenge {
@@ -242,8 +361,8 @@ body {
 }
 
 #menu {
-    height: 184px;
-    width: 250px;
+    height: 180px;
+    width: 200px;
     position: absolute;
     display: none; /* DEFAULT */
 
