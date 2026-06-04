@@ -157,6 +157,8 @@ body {
     margin-top: -60px;
     margin-left: -60px;
     background-color: rgb(245, 245, 245);
+
+    z-index: -1;
 }
 
 .loading-indicator {
@@ -209,7 +211,10 @@ body {
     position: absolute;
     
     transition: none;
-    /* background:  50% 50% / 120px 120px no-repeat; */
+    background-image:  url('assets/penguin.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     top: 50%;
     left: 50%;
