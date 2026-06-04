@@ -217,6 +217,10 @@ body {
     outline: none;
 }
 
+.menu-info:hover {
+    background-color: rgb(245, 245, 245);
+}
+
 .info-on {
     width: 25px;
     height: 25px;
@@ -297,6 +301,40 @@ body {
 
     z-index: 100;
 }
+
+.button-refresh:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.refresh-on {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    display: block;
+
+    top: 5px;
+    left: 5px;
+
+    opacity: 0; /* DEFAULT VALUE */
+    color: rgb(85, 85, 85);
+}
+
+.refresh-on:hover {
+    opacity: 0;
+}
+
+.refresh-off {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    display: block;
+
+    top: 5px;
+    left: 5px;
+
+    opacity: 1; /* DEFAULT VALUE */
+}
+
 
 .captcha-logo {
     width: 35px;

@@ -93,23 +93,30 @@
                         </div>
                     </div>
                 </div>
-                <div class="button-refresh button"></div>
+                <div class="button-refresh button">
+                    <div class="refresh-on" aria-hidden="true">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#787878" style="fill: rgb(85, 85, 85);" d="M20.9148 19.6529C20.9994 19.7239 21.0106 19.8501 20.9381 19.9335C19.5234 21.5598 17.6702 22.7467 15.5981 23.3506C13.4619 23.9733 11.1891 23.9485 9.06708 23.2794C6.94502 22.6103 5.06902 21.327 3.67632 19.5917C2.28361 17.8564 1.43675 15.7471 1.24283 13.5306C1.0489 11.314 1.51662 9.08969 2.58684 7.13894C3.65706 5.18818 5.28171 3.5986 7.25535 2.57119C9.22898 1.54378 11.463 1.12469 13.6748 1.36692C15.8203 1.6019 17.8514 2.44889 19.527 3.80487C19.6129 3.87435 19.6238 4.00065 19.5528 4.08527L18.3637 5.50245C18.2927 5.58707 18.1666 5.5979 18.0805 5.5288C16.746 4.45867 15.1329 3.79007 13.4298 3.60355C11.6604 3.40977 9.87319 3.74503 8.29428 4.56696C6.71537 5.38889 5.41565 6.66056 4.55948 8.22116C3.7033 9.78176 3.32913 11.5612 3.48427 13.3345C3.63941 15.1077 4.3169 16.7952 5.43106 18.1834C6.54522 19.5716 8.04602 20.5982 9.74367 21.1335C11.4413 21.6688 13.2596 21.6886 14.9685 21.1905C16.6133 20.7111 18.0858 19.7725 19.2142 18.4869C19.287 18.4039 19.413 18.3927 19.4976 18.4637L20.9148 19.6529Z"></path>
+                            <path fill="#787878" style="fill: rgb(85, 85, 85);" d="M22.7248 7.93974C22.7557 8.07007 22.6522 8.19336 22.5185 8.18555L14.9712 7.74462C14.807 7.73502 14.7239 7.54239 14.8297 7.4164L20.6321 0.501257C20.7379 0.375269 20.942 0.423631 20.98 0.583657L22.7248 7.93974Z"></path>
+                        </svg>
+                    </div>
+                    <div class="refresh-off" aria-hidden="true">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#787878" style="fill: rgb(85, 85, 85);" d="M20.9148 19.6529C20.9994 19.7239 21.0106 19.8501 20.9381 19.9335C19.5234 21.5598 17.6702 22.7467 15.5981 23.3506C13.4619 23.9733 11.1891 23.9485 9.06708 23.2794C6.94502 22.6103 5.06902 21.327 3.67632 19.5917C2.28361 17.8564 1.43675 15.7471 1.24283 13.5306C1.0489 11.314 1.51662 9.08969 2.58684 7.13894C3.65706 5.18818 5.28171 3.5986 7.25535 2.57119C9.22898 1.54378 11.463 1.12469 13.6748 1.36692C15.8203 1.6019 17.8514 2.44889 19.527 3.80487C19.6129 3.87435 19.6238 4.00065 19.5528 4.08527L18.3637 5.50245C18.2927 5.58707 18.1666 5.5979 18.0805 5.5288C16.746 4.45867 15.1329 3.79007 13.4298 3.60355C11.6604 3.40977 9.87319 3.74503 8.29428 4.56696C6.71537 5.38889 5.41565 6.66056 4.55948 8.22116C3.7033 9.78176 3.32913 11.5612 3.48427 13.3345C3.63941 15.1077 4.3169 16.7952 5.43106 18.1834C6.54522 19.5716 8.04602 20.5982 9.74367 21.1335C11.4413 21.6688 13.2596 21.6886 14.9685 21.1905C16.6133 20.7111 18.0858 19.7725 19.2142 18.4869C19.287 18.4039 19.413 18.3927 19.4976 18.4637L20.9148 19.6529Z"></path>
+                            <path fill="#787878" style="fill: rgb(85, 85, 85);" d="M22.7248 7.93974C22.7557 8.07007 22.6522 8.19336 22.5185 8.18555L14.9712 7.74462C14.807 7.73502 14.7239 7.54239 14.8297 7.4164L20.6321 0.501257C20.7379 0.375269 20.942 0.423631 20.98 0.583657L22.7248 7.93974Z"></path>
+                        </svg>
+                    </div>
+                </div>
                 <a class="captcha-logo"></a>
             </div>
         </div>
 
         <script>
             const menuInfoButton = document.getElementsByClassName("menu-info")[0];
-
             const menuInfoButtonOn = document.getElementsByClassName("info-on")[0];
             const menuInfoButtonOff = document.getElementsByClassName("info-off")[0];
 
             const scrollMenu = document.getElementById("menu");
-
-            console.log(menuInfoButton);
-            console.log(menuInfoButtonOn);
-            console.log(menuInfoButtonOff);
-            console.log(menu)
 
             let menuInfoIsEnabled = false;
 
@@ -143,6 +150,21 @@
                     menuInfoButtonOn.style.opacity = 0;
                 }
             });
+
+            const refreshButton = document.getElementsByClassName("button-refresh")[0];
+            const refreshButtonOn = document.getElementsByClassName("refresh-on")[0];
+            const refreshButtonOff = document.getElementsByClassName("refresh-off")[0];
+
+            refreshButton.addEventListener("mouseenter", () => {
+                refreshButtonOff.style.opacity = 0;
+                refreshButtonOn.style.opacity = 1;
+            });
+
+            refreshButton.addEventListener("mouseleave", () => {
+                refreshButtonOff.style.opacity = 1;
+                refreshButtonOn.style.opacity = 0;
+            });
+
 
         </script>
     </body>
