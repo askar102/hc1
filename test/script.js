@@ -1,23 +1,3 @@
-// tasks.addEventListener('click', (event) => {
-//     const task = event.target.closest('.task');
-
-//     task.classList.toggle('is-selected');
-
-//     console.log(task);
-// });
-
-// const Task = {
-//     isSelected: false,
-
-//     toggleSelected: () => {
-//         this.isSelected = !this.isSelected;
-
-//         this.classList.toggle('is-selected');
-//         console.log(task);
-//     }
-// };
-
-
 class Task {
     _isSelected = false;
 
