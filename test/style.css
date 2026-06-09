@@ -1,0 +1,39 @@
+.main-container {
+    width: 700px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+}
+
+.task-grid {
+    width: 380px;
+    height: 380px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+
+    row-gap: 5px;
+    align-content: start;
+    padding: 3px;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+}
+
+.task {
+    width: 120px;
+    height: 120px;
+
+    background-image: url(penguin.png);
+    background-size: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    cursor: pointer;
+}
+
+.task.is-selected {
+    transform: scale(0.8);
+}

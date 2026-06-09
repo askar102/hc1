@@ -1,9 +1,15 @@
+// Юзер выбрал фотку -> countOfPressed += 1; -> смена аттрибута, визуала фотки
+// Юзер убрал фотку -> countOfPressed -= 1; -> проверяем, countOfPressed <= 0 -> кнопка "Готово" заменяется
+
+// Task { photo, correct } 76y45c   b
+
 const taskGrid = document.getElementsByClassName('task-grid')[0];
 
 console.log(taskGrid);
 
-for (const task of taskGrid.children) {
+for (const task of taskGrid.children) {             
     task.addEventListener('click', () => {
+        //todo: fix lag
         console.log(task);
         let isPressed = ariaIsPressed(task.getAttribute('aria-pressed'));
         console.log(isPressed);
@@ -17,10 +23,15 @@ for (const task of taskGrid.children) {
 
 function ariaIsPressed(task_attribute) {
     if (task_attribute === "true") {
+        submitButton(true);
         return true;
     }
 
     if (task_attribute === "false") {
+        submitButton(false);
+        return false;
+    }
+    else {
         return false;
     }
 }
@@ -48,6 +59,20 @@ function changeVisual(taskImageWrapper, isPressed) {
             element.style['margin-left'] = "-60px";
         }
     });
+}
+
+function submitButton(isTaskPressed) {
+    const button = document.getElementsByClassName('button-submit')[0];
+    const text = button.firstChild
+
+    if (isTaskPressed) {
+        button.style.backgroundColor = "rgb(0, 131, 143)";
+        text.textContent = 'Готово';
+    }
+    else {
+        button.style.backgroundColor = "rgb(85, 85, 85)";
+        text.textContent = 'Пропустить';
+    }
 }
 
 // wrapper
