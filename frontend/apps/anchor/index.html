@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Мой сайтa</title>
+</head>
+<body>
+    <div id="captcha-frame" class="captcha-frame">
+        <div class="captcha-text">Я человек</div>
+
+        <div id="captcha-information">
+            <img id="captcha-logo" src="assets/logo.png" tabindex="0" alt="">
+            <div id="captcha-footer" class="captcha-footer">
+                <a class="link" href="https://www.youtube.com/watch?v=Rzpk_hlj7aY" target="_blank" tabindex="0">Конфиденциальность</a>
+                <span>-</span>
+                <a class="link" tabindex="0" href="https://www.youtube.com/watch?v=Rzpk_hlj7aY" target="_blank">Условия</a>
+            </div>
+        </div>
+
+        <div id="captcha-button" class="captcha-button">
+            <div class="loading" id="loading" style="display: none;">
+                <svg viewBox="0 0 44 44" width="30" height="30">
+                    <circle cx="22" cy="22" r="1"
+                      stroke="#FF7880"
+                      stroke-width="2"
+                      fill="none">
+                  
+                      <animate attributeName="r"
+                        from="1" to="20"
+                        dur="1.8s"
+                        repeatCount="indefinite" />
+                  
+                      <animate attributeName="stroke-opacity"
+                        from="1" to="0"
+                        dur="1.8s"
+                        repeatCount="indefinite" />
+                    </circle>
+                  
+                    <circle cx="22" cy="22" r="1"
+                      stroke="#FF7880"
+                      stroke-width="2"
+                      fill="none">
+                  
+                      <animate attributeName="r"
+                        from="1" to="20"
+                        dur="1.8s"
+                        begin="-0.9s"
+                        repeatCount="indefinite" />
+                  
+                      <animate attributeName="stroke-opacity"
+                        from="1" to="0"
+                        dur="1.8s"
+                        begin="-0.9s"
+                        repeatCount="indefinite" />
+                    </circle> 
+                </svg>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+        const frame = document.getElementById('captcha-frame');
+        const button= document.getElementById('captcha-button');
+
+        const loading = document.getElementById("loading");
+
+        frame.addEventListener('click', captcha_clicked);
+        // button.addEventListener('click', captcha_clicked);
+
+        function captcha_clicked() {
+            console.log('TEST');
+
+            loading.style.display = "block";
+            button.style.border = "0px";
+
+            setTimeout(() => {
+                loading.style.display = "none";
+                button.style.border = "1px solid #525151";
+            }, 2000);
+
+        }
+
+
+        const links = document.querySelectorAll('.link');
+        const logo = document.getElementById('captcha-logo');
+
+        const outline_style = "rgb(0, 131, 143) solid 2px"
+
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.stopPropagation();
+                console.log('Link clicked');
+                // REF CODE
+            });
+        });
+
+        
+
+        logo.addEventListener('click', (e) => {
+            e.stopPropagation();
+            console.log('Logo clicked');
+            window.open("https://www.youtube.com/watch?v=Rzpk_hlj7aY", "_blank")
+            // LOGO CODE
+        })
+
+
+        </script>
+</body>
+</html>

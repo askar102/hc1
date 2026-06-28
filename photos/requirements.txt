@@ -1,0 +1,6 @@
+beautifulsoup4==4.15.0
+Pillow==12.2.0
+selenium==4.44.0
+soupsieve==2.8.4
+urllib3==2.7.0
+watchdog==6.0.0

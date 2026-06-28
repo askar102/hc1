@@ -1,0 +1,136 @@
+
+.captcha-button {
+    background-color: rgb(250, 250, 250); /* цвет фона */
+    color: rgb(0, 131, 143); /* цвет текста */
+    border: 1px solid rgb(85, 85, 85);
+    border-radius: 4px; /* скругление углов */
+    /* padding: 10px 20px; внутренние отступы: вертикаль 10px, горизонталь 20px */
+    font-size: 16px; /* размер текста */
+    cursor: pointer; /* курсор при наведении */
+    transition: background-color 0.3s, transform 0.2s; /* анимация при наведении */
+    outline-color: rgb(0, 131, 143);
+
+    position: absolute;
+    top: 23px;   /* от верхнего края родителя */
+    left: 20px;  /* от левого края родителя */
+
+    width: 28px;   /* фиксированная ширина */
+    height: 28px;
+
+}
+
+/* Эффект при наведении
+.captcha-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);;
+} */
+
+.captcha-frame {
+    position: relative;
+
+    width: 300px;             /* ширина рамки */
+    height: 74px;             /* высота рамки */
+    padding: 0px;
+    margin: 0px;
+    border: 1px solid rgb(224, 224, 224);   /* основная рамка */
+    border-radius: 4px;      /* скруглённые углы */
+    background-color: rgb(250, 250, 250);/* светлый фон */
+    color: rgb(175, 152, 152);
+    display: block;
+    align-items: center;      /* вертикальное выравнивание содержимого */
+    justify-content: center;  /* горизонтальное выравнивание содержимого */
+    transition: all 0.1s ease;
+    cursor: pointer;    
+}
+
+.captcha-frame:hover {
+    border-color: rgb(224, 224, 224);  
+    background-color: rgba(245, 245, 245);    /* рамка темнеет при наведении */
+    transition: background-color 0.1s ease; /* быстрое исчезновение */
+}
+
+.loading {
+    width: 30px;
+    height: 30px;
+
+}
+
+.captcha-text {
+    position: absolute;
+    top: 30px;   /* от верхнего края родителя */
+    left: 70px;  /* от левого края родителя */
+    width: 70px;
+    height: 25px;
+    text-align: left;
+    /* background: salmon; */
+    color:rgb(51, 51, 51);
+    font-family: "Arial", sans-serif; /* основной и запасной шрифт */
+    font-size: 14px; /* размер текста, по желанию */
+
+    user-select: none;      
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none; 
+}
+
+#captcha-logo {
+    position: absolute;
+    left: 235px;
+    top: 10px;
+    width: 44px;
+    display: block;
+
+    user-select: none;      
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none;     
+}
+
+#captcha-logo:focus {
+    outline: 2px solid rgb(0, 131, 143);
+}
+
+.captcha-footer {
+    /* background-color: red; */
+    font-family: "Arial", sans-serif;
+    font-size: 8px;    
+    color: rgb(85, 85, 85);
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    outline-color: rgb(0, 131, 143);
+    display: inline-block;
+    line-height: 8px;
+
+    position: absolute;
+    top: 60px;
+    left: 170px;
+
+    user-select: none;      
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none;     
+}
+
+.link:hover {
+    border-bottom: 1px solid rgb(0, 131, 143); /* линия под текстом */
+}
+
+.link:focus {
+    outline: 2px solid rgb(0, 131, 143);
+    border-bottom: none;
+}
+
+
+.link {
+    color: rgb(85, 85, 85);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.link:visited,
+.link:active,
+.link:hover,
+.link:focus {
+    color: rgb(85, 85, 85); /* всегда один цвет */
+}
